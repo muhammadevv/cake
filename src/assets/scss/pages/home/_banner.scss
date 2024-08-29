@@ -1,0 +1,167 @@
+.banner {
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 90px;
+  @include center();
+
+  @include media(900) {
+    margin-bottom: 60px;
+  }
+  @include media(768) {
+    margin-bottom: 40px;
+  }
+  @include media(440) {
+    margin-bottom: 20px;
+  }
+
+
+  &-row {
+    max-width: 1440px;
+    width: 100%;
+    height: 800px;
+    background-color: $primary;
+  }
+
+  &-image {
+    width: 50%;
+    height: 100%;
+ 
+  }
+
+  &-content {
+    width:50%;
+    height: 100%;
+  }
+
+  &-title {
+    font-size: 44px;
+    color: $white;
+    font-weight: 400;
+    line-height: 120%;
+
+    @include media(1024) {
+      font-size: 40px;
+    }
+
+    @include media(900) {
+      font-size: 32px;
+    }
+
+    @include media(800) {
+      font-size: 30px;
+    }
+
+    @include media(700) {
+      font-size: 28px;
+    }
+
+    @include media(440) {
+      font-size: 24px;
+    }
+  }
+
+  &-subtitle {
+    color: $white;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 120%;
+    padding-top: 14px;
+    padding-bottom: 30px;
+
+    @include media(1024) {
+      font-size: 18px;
+      padding-top: 10px;
+      padding-bottom: 20px;
+    }
+
+    @include media(900) {
+      font-size: 16px;
+      padding-top: 8px;
+      padding-bottom: 14px;
+    }
+
+    @include media(800) {
+      padding-top: 6px;
+      padding-bottom: 12px;
+    }
+
+    @include media(700) {
+      font-size: 14px;
+      padding-top: 4px;
+      padding-bottom: 10px;
+    }
+
+    @include media(600) {
+      font-size: 14px;
+      padding-top: 2px;
+      padding-bottom: 8px;
+    }
+
+    @include media(500) {
+      font-size: 14px;
+      padding-top: 2px;
+      padding-bottom: 6px;
+    }
+
+    @include media(440) {
+      font-size: 12px;
+      padding-top: 4px;
+      padding-bottom: 6px;
+    }
+  }
+
+  &-button {
+    width: 240px;
+    height: 40px;
+    color: $black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    background-color: $white;
+    text-transform: uppercase;
+    @include trn();
+
+    @include hover() {
+      &:hover {
+        color: $white;
+        background-color: $black;
+      }
+    }
+
+    @include media(1024) {
+      width: 200px;
+      height: 36px;
+      font-size: 12px;
+    }
+
+    @include media(900) {
+      width: 160px;
+      height: 32px;
+      font-size: 10px;
+    }
+
+    @include media(800) {
+      width: 150px;
+      height: 30px;
+      font-size: 10px;
+    }
+
+    @include media(700) {
+      width: 140px;
+      height: 28px;
+      font-size: 10px;
+    }
+
+    @include media(600) {
+      width: 120px;
+      height: 28px;
+      font-size: 10px;
+    }
+
+    @include media(440) {
+      width: 100px;
+      height: 22px;
+      font-size: 8px;
+    }
+  }
+}

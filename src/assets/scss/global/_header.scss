@@ -1,0 +1,87 @@
+.header {
+  width: 100%;
+  background-color: $white;
+  border-bottom: 1px solid #E0E0E0;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  @include media(900){
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.03);
+  }
+
+
+
+  &-row {
+    padding: 12px 0;
+    @include flex(center, space-between);
+  }
+
+
+  &-logo {
+
+    a {
+      padding: 10px;
+    }
+  }
+
+  &-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+
+
+  &-link {
+    color: $black;
+    font-size: 14px;
+    padding: 6px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    @include trn();
+
+    @include media(900) {
+      display: none;
+    }
+  }
+
+  &-buttons{
+    @include center();
+    gap: 10px;
+  }
+
+  &-button {
+    padding: 6px 8px;
+    border-radius: 8px;
+    position: relative;
+
+
+    &__span {
+      color: $white;
+      width: 14px;
+      height: 14px;
+      font-size: 9px;
+      border-radius: 50%;
+      background-color: $black;
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include center();
+    }
+
+    &__menu {
+      display: none;
+
+      @include media(900) {
+        display: block;
+      }
+    }
+
+    @include media (660) {
+      padding: 8px 10px;
+      margin: 6px 0;
+    }
+  }
+
+}

@@ -1,0 +1,311 @@
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+
+  &-title {
+    color: $gray-500;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 24px 0 0 24px;
+
+    @include media(500) {
+      font-size: 22px;
+      margin: 20px 0 0 20px;
+    }
+
+    @include media(460) {
+      font-size: 20px;
+      margin: 18px 0 0 18px;
+    }
+
+    @include media(420) {
+      font-size: 18px;
+      margin: 16px 0 0 16px;
+    }
+
+    @include media(380) {
+      font-size: 16px;
+      margin: 14px 0 0 10px;
+    }
+  }
+
+  &-btn {
+    font-size: 22px;
+    margin: 24px;
+    @include trn();
+    border-bottom: 1px transparent solid;
+
+    @include media(500) {
+      font-size: 20px;
+    }
+
+    @include media(460) {
+      font-size: 18px;
+      margin: 20px;
+    }
+
+    @include media(420) {
+      font-size: 14px;
+      margin: 16px;
+    }
+
+    @include hover() {
+      &:hover {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+
+  &-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &-content {
+    width: 477px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -477px;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    transition: all 0.3s ease-in-out;
+    overflow-x: scroll;
+
+    @include media(500) {
+      width: 420px;
+    }
+
+    @include media(460) {
+      width: 380px;
+    }
+
+    @include media(440) {
+      width: 360px;
+    }
+
+    @include media(400) {
+      // width: 320px;
+    }
+
+    @include media(380) {
+      width: 300px;
+    }
+  }
+
+  &-close {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  &-head {
+    background-color: $white;
+    padding: 32px 24px 24px 24px;
+
+    &__title {
+      color: $black;
+      font-size: 24px;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+  }
+
+  &-body {
+    flex: 1 1 auto;
+    padding: 24px;
+    overflow-y: scroll;
+    @include center();
+    flex-direction: column;
+    gap: 20px;
+
+    &_text {
+      color: $gray-500;
+      font-size: 16px;
+    }
+
+    &_btn {
+      font-size: 16px;
+      padding: 10px 20px;
+      border: 1px solid $gray-500;
+    }
+
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #000;
+      border-radius: 0;
+    }
+  }
+
+  &-footer {
+    width: 100%;
+    height: 144px;
+    padding: 24px;
+    background-color: $white;
+    box-shadow: 0 -6px 18px -8px rgba(0, 0, 0, 0.25);
+
+    &__row {
+      @include flex(center, space-between);
+    }
+
+    &__price {
+      color: $black;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.01rem;
+
+      &__span {
+        color: $black;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.02rem;
+      }
+    }
+
+    &__button {
+      width: 100%;
+      color: $white;
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 8px;
+      @include center();
+      padding: 14px 16px;
+      text-transform: uppercase;
+      background-color: $gray-500;
+      @include trn();
+
+      @include hover() {
+        &:hover {
+          background-color: #000;
+        }
+      }
+    }
+
+    &__text {
+      color: $gray-500;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+
+  &-product {
+    display: flex;
+    gap: 20px;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+
+    &__image {
+      img {
+        max-width: 102px;
+        max-height: 127px;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      color: $black;
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    &__subtitle {
+      color: $gray-300;
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    &__button {
+      padding: 8px 10px;
+
+      svg {
+        @include trn();
+      }
+
+      @include hover() {
+        &:hover svg {
+          stroke: $red;
+        }
+      }
+    }
+
+    &__price {
+      color: $black;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    &__content {
+      width: 100%;
+      flex-direction: column;
+      @include flex(center, space-between);
+    }
+
+    &__row {
+      width: 100%;
+      @include flex(center, space-between);
+    }
+  }
+}
+
+.modal.active,
+.modal-content.active {
+  visibility: visible;
+  opacity: 1;
+  right: 0;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dee2e7;
+}
+
+.counter-button {
+  width: 26px;
+  height: 28px;
+  font-size: 14px;
+  background-color: $white;
+
+  @include hover() {
+    &:hover {
+      background-color: $gray-100;
+      border: 1px solid $gray-500;
+    }
+  }
+}
+
+.counter-text {
+  font-size: 14px;
+  font-weight: 500;
+  width: 26px;
+  height: 26px;
+  @include center();
+}

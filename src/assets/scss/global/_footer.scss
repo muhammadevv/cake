@@ -1,0 +1,194 @@
+.footer {
+  margin-top: 40px;
+  padding: 60px 20px 20px 20px;
+  background-color: $gray-100;
+  position: relative;
+
+  // @include media(1024) {
+  //   top: 500px;
+  // }
+
+  // @include media(900) {
+  //   top: 200px;
+  // }
+
+  // @include media(840) {
+  //   top: 740px;
+  // }
+
+  // @include media(768) {
+  //   top: 600px;
+  // }
+
+  // @include media(440) {
+  //   padding-top: 40px;
+  // }
+
+  // @include media(400) {
+  //   top: 1000px;
+  // }
+
+  &-content {
+    @include flex(unset, space-between);
+    padding: 0 5%;
+
+    @include media (900) {
+      flex-wrap: wrap;
+      padding: 0 4%;
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+    }
+
+    @include media(440) {
+      grid-template-columns: repeat(2, 50%);
+      padding: 0;
+    }
+
+    @include media(375) {
+      grid-template-columns: repeat(1, 100%);
+    }
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-title {
+    color: $black;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    margin-bottom: 20px;
+
+    @include media(440) {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &-link {
+    color: $gray-300;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    margin-bottom: 10px;
+    @include trn();
+
+    @include media(440) {
+      font-size: 12px;
+    }
+
+    @include hover {
+      &:hover {
+        color: $black;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-signup {
+    width: 33%;
+
+    @include media(900) {
+      width: 500px;
+      margin-top: 20px;
+    }
+
+    @include media(560) {
+      width: 380px;
+    }
+
+    @include media(440) {
+      width: 340px;
+    }
+
+    @include media(380) {
+      width: 330px;
+    }
+
+    @include media(360) {
+      width: 300px;
+    }
+
+    &__title {
+      color: $black;
+      font-size: 20px;
+      line-height: 32px;
+      padding-bottom: 12px;
+      font-weight: 400;
+
+      @include media(560) {
+        font-size: 18px;
+      }
+
+      @include media(440) {
+        font-size: 16px;
+        padding-bottom: 8px;
+      }
+
+      @include media(375) {
+        font-size: 14px;
+        padding-bottom: 6px;
+      }
+    }
+
+    &__subtitle {
+      margin-top: 12px;
+      color: $gray-300;
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+    }
+
+    &__form {
+      display: flex;
+      align-items: center;
+    }
+
+    &__input {
+      width: 100%;
+      font-size: 16px;
+      outline: none;
+      padding: 17px 15px;
+      border: 1px solid $gray-200;
+
+      @include media(560) {
+        padding: 14px 12px;
+        font-size: 14px;
+      }
+
+      @include media(440) {
+        padding: 12px 10px;
+        font-size: 12px;
+      }
+
+      &:focus {
+        border-color: $gray-400;
+      }
+    }
+
+    &__button {
+      padding: 15px 15px;
+      background-color: $black;
+      @include center();
+
+      @include media(560) {
+        padding: 11px 12px;
+      }
+
+      @include media(440) {
+        padding: 8px 8px;
+      }
+
+      @include hover() {
+        &:hover svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+}
