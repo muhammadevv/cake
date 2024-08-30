@@ -13,7 +13,7 @@
       gap: 10px;
     }
   }
-  
+
   &-row {
     width: 100%;
     @include flex(center, space-between);
@@ -28,7 +28,7 @@
       font-weight: 400;
     }
 
-    &_filter_btn{
+    &_filter_btn {
       gap: 8px;
       font-size: 16px;
       @include center();
@@ -40,37 +40,76 @@
 }
 
 
+// .price-tag {
+//   display: inline-block;
+//   background-color: #fff;
+//   padding: 22px 20px;
+//   font-size: 24px;
+//   font-family: Arial, sans-serif;
+//   color: #333;
+//   position: relative;
+//   border: 1px solid #ebebeb;
+// }
+
+// .price-tag:before {
+//   content: '';
+//   position: absolute;
+//   left: -20px;
+//   top: 0;
+//   width: 100px;
+//   height: 100px;
+//   // background: #000;
+//   // border-top: 40px solid transparent;
+//   // border-bottom: 40px solid transparent;
+//   // border-right: 30px solid #fff;
+//   // border-left: 100px solid #fff;
+//   border: 1px solid #ebebeb;
+// }
+
 .price-tag {
-  display: inline-block;
-  background-color: #fff;
-  padding: 22px 20px;
-  font-size: 24px;
-  font-family: Arial, sans-serif;
-  color: #333;
-  position: relative;
+  align-items: center;
   border: 1px solid #ebebeb;
+  border-left: 0;
+  display: flex;
+  padding: 9px 12px 9px 8px;
+  position: relative;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 4px 7px 4px 3px;
+}
+
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  bottom: 3px;
+  height: 5px;
+  left: 1%;
+  position: absolute;
+  width: 98%;
+  z-index: 50;
 }
 
 .price-tag:before {
-  content: '';
-  position: absolute;
-  left: -20px;
-  top: 0;
-  width: 0;
+  border-color: transparent #ebebeb transparent transparent;
+  border-style: solid;
+  border-width: 20px 12px 20px 0;
+  content: "";
   height: 0;
-
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  border-right: 20px solid #ebebeb;
-  // border: 1px solid #ebebeb;
+  left: -12px;
+  position: absolute;
+  top: -1px;
+  width: 0;
 }
 
 .price-tag:after {
-  content: '';
+  border-color: transparent #fff transparent transparent;
+  border-style: solid;
+  border-width: 19px 11px 19px 0;
+  content: "";
+  height: 0;
+  left: -11px;
   position: absolute;
-  right: -20px;
   top: 0;
   width: 0;
-  height: 0;
-  // border-bottom: 30px solid transparent;
+  // border-width: 14px 8px 14px 0;
+  // left: -8px;
 }

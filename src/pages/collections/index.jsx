@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCollections, getProducts } from '../../store/actions/productsActions';
 import { FilterModal } from '../../components';
@@ -31,7 +31,7 @@ function Collections() {
             <div className="collections-head">
               <div className="collections-row">
                 <h1 className='collections-head_title'>Торты</h1>
-                 <button className='collections-head_filter_btn' onClick={() => setFilterOpen(true)}><FilterIcon/> Фильтр</button>
+                <button className='collections-head_filter_btn' onClick={() => setFilterOpen(true)}><FilterIcon /> Фильтр</button>
               </div>
 
               <div className='collections-head_buttons'>
@@ -39,12 +39,35 @@ function Collections() {
             </div>
             <div className="collections-body">
 
-              <div class="price-tag">7 100 ₽</div>
+              <div className="popular-item" >
+                <div>
+                  <div className="popular-item__image">
+                    {/* <Link to={`/product/${item.slug}`}> */}
+                    {/* <img
+                        className="popular-item__image__img"
+                        src={item.image}
+                        alt={item.title}
+                      /> */}
+                    {/* </Link> */}
+                  </div>
+                  <div className="popular-item__content">
+                    <div className="popular-item__row">
+                      {/* <Link to={`/product/${item.slug}`}> */}
+                      <h3 className="popular-item__title">Russian Drag Racing Community № 4178</h3>
+                      {/* </Link> */}
+                      <p className="popular-item__price">$500</p>
+                    </div>
+                    <p className="popular-item__subtitle">от 6 кг</p>
+                  </div>
+                </div>
+              </div>
+
+              <p className="price-tag">7 100 ₽</p>
             </div>
           </div>
         </div>
       </div>
-    <FilterModal collections={collections} setFilterOpen={setFilterOpen} filterOpen={filterOpen}/>
+      <FilterModal collections={collections} setFilterOpen={setFilterOpen} filterOpen={filterOpen} />
     </>
   )
 }
