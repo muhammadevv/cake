@@ -42,27 +42,49 @@ function Collections() {
               <div className="popular-item" >
                 <div>
                   <div className="popular-item__image">
-                    {/* <Link to={`/product/${item.slug}`}> */}
-                    {/* <img
+                    <Link to={`/product/`}>
+                      <img
                         className="popular-item__image__img"
-                        src={item.image}
-                        alt={item.title}
-                      /> */}
-                    {/* </Link> */}
+                        src='https://tortik-annuchka.com/storage/shop/item/896/07a1dc64322f817629acdd4d28765f0b.jpg'
+
+                      />
+                    </Link>
                   </div>
                   <div className="popular-item__content">
                     <div className="popular-item__row">
-                      {/* <Link to={`/product/${item.slug}`}> */}
-                      <h3 className="popular-item__title">Russian Drag Racing Community № 4178</h3>
-                      {/* </Link> */}
-                      <p className="popular-item__price">$500</p>
+                      <Link to={`/product/`}>
+                        <h3 className="popular-item__title">Russian Drag Racing Community № 4178</h3>
+                      </Link>
+                      <p className="popular-item__price">500 000 USZ</p>
                     </div>
                     <p className="popular-item__subtitle">от 6 кг</p>
                   </div>
                 </div>
               </div>
 
-              <p className="price-tag">7 100 ₽</p>
+              <div className="popular-item" >
+                <div>
+                  <div className="popular-item__image">
+                    <Link to={`/product/`}>
+                      <img
+                        className="popular-item__image__img"
+                        src='https://tortik-annuchka.com/storage/shop/item/890/1a01cea002b979c951b589dfb0b6a501.jpg'
+                      />
+                    </Link>
+                  </div>
+                  <div className="popular-item__content">
+                    <div className="popular-item__row">
+                      <Link to={`/product/`}>
+                        <h3 className="popular-item__title">Russian Drag Racing Community № 4178</h3>
+                      </Link>
+                      <p className="popular-item__price">500 000 USZ</p>
+                    </div>
+                    <p className="popular-item__subtitle">от 6 кг</p>
+                  </div>
+                </div>
+              </div>
+
+
             </div>
           </div>
         </div>
