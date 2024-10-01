@@ -1,0 +1,120 @@
+.login {
+  width: 100%;
+  height: 100%;
+  margin-top: 60px;
+  background: rgb(255, 255, 255);
+
+  &-row {
+    @include center();
+
+    // @include media(440) {
+    //   width: 300px;
+    //   height: 300px;
+    // }
+  }
+
+  &-panel {
+    margin-top: 80px;
+    width: 540px;
+    // height: 560px;
+    background: $white;
+    border: 1px solid $gray-200
+  }
+
+  &-head {
+    width: 100%;
+    padding: 30px;
+
+
+    &_title {
+      font-size: 26px;
+      font-weight: 400;
+    }
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 40px;
+
+    &_label_email {
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.1s ease-in-out;
+    }
+
+    &_label_password {
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.1s ease-in-out;
+    }
+
+    &_input_email {
+      font-size: 16px;
+      padding: 4px 0;
+      border-bottom: 1px solid $black;
+    }
+
+    &_input_password {
+      font-size: 16px;
+      padding: 4px 0;
+      border-bottom: 1px solid $black;
+    }
+
+    &_login-btn {
+      padding: 14px 10px;
+      color: $white;
+      font-size: 16px;
+      background: $dark;
+
+    }
+  }
+
+  &-footer {
+    padding: 40px;
+    border-top: 1.5px solid $gray-100;
+    @include center();
+    flex-direction: column;
+
+    &_text {
+      color: $dark;
+      font-size: 16px;
+    }
+
+    &_signup-btn {
+      width: 60%;
+      height: 40px;
+      color: $dark;
+      font-size: 16px;
+      margin-top: 12px;
+      @include center();
+      border: 1px solid $dark;
+      background-color: $white;
+    }
+  }
+}
+
+.login-form_input_password:focus {
+  border-color: $gray-300;
+}
+
+.login-form_input_email:focus {
+  border-color: $gray-300;
+}
+
+:has(.login-form_input_email:focus) {
+  .login-form_label_email {
+    color: $gray-300;
+    font-size: 14px;
+  }
+}
+
+:has(.login-form_input_password:focus) {
+  .login-form_label_password {
+    color: $gray-300;
+    font-size: 14px;
+  }
+}

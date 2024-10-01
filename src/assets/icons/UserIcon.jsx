@@ -2,10 +2,11 @@ import * as React from "react"
 const UserIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
+    width={22}
+    height={22}
     fill="none"
     {...props}
+    viewBox="0 0 24 24"
   >
     <path stroke="#313131" d="M16.5 6a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z" />
     <path

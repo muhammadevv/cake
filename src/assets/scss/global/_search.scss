@@ -9,7 +9,7 @@
   visibility: hidden;
   @include trn();
 
-  &.open{
+  &.open {
     top: 0;
     opacity: 1;
     visibility: visible;
@@ -19,6 +19,13 @@
     position: absolute;
     top: 0;
     right: 0;
+
+    @include media(660) {
+      display: none;
+    }
+
+
+
   }
 
   &-bg {
@@ -38,6 +45,17 @@
     top: 60px;
     z-index: 10;
     padding: 50px 0;
+
+    @include media(990) {
+      padding: 40px 0px;
+    }
+
+    @include media(768) {
+      padding: 30px 0px;
+      top: 80px;
+
+    }
+
   }
 
   &-center {
@@ -54,6 +72,14 @@
     width: 760px;
     display: flex;
     border-bottom: 1px solid $dark;
+
+    @include media(990) {
+      width: 580px;
+    }
+
+    @include media(768) {
+      width: 400px;
+    }
 
     &_input {
       width: 100%;
@@ -74,6 +100,12 @@
     &_button {
       padding: 8px 20px;
       border: 1px solid $dark;
+
+      @include media(768) {
+        font-size: 12px;
+        padding: 2px 12px;
+      }
+
     }
   }
 }

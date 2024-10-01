@@ -6,7 +6,7 @@
   top: 0;
   z-index: 100;
 
-  @include media(900){
+  @include media(900) {
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.03);
   }
 
@@ -15,17 +15,24 @@
   &-row {
     padding: 12px 0;
     @include flex(center, space-between);
+
+    @include media(900) {
+      padding: 10px 0;
+    }
+
+    @include media(660) {
+      padding: 2px 0;
+    }
   }
 
 
   &-logo {
-
     a {
       padding: 10px;
     }
   }
 
-  &-nav{
+  &-nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +53,7 @@
     }
   }
 
-  &-buttons{
+  &-buttons {
     @include center();
     gap: 10px;
   }
@@ -56,6 +63,15 @@
     border-radius: 8px;
     position: relative;
 
+    @include media(990) {
+      &.serach {
+        display: none;
+      }
+
+      &.user {
+        display: none;
+      }
+    }
 
     &__span {
       color: $white;
@@ -80,7 +96,7 @@
 
     @include media (660) {
       padding: 8px 10px;
-      margin: 6px 0;
+      // margin: 4px 0;
     }
   }
 

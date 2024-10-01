@@ -13,13 +13,16 @@ function Popular() {
 
   const width = window.screen.width;
 
-  
+  window.onresize = function () {
+    location.reload(); // Reload the current page
+  };
+
   const { sets } = useSelector((state) => state.home);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSetsList());
   }, []);
-  
+
   console.log(width);
 
   return (
@@ -35,8 +38,8 @@ function Popular() {
               "--swiper-scrollbar-horizontal-color": "#fff",
               "--swiper-scrollbar-color": "#fff",
             }}
-            spaceBetween={16}
-            slidesPerView={4}
+            spaceBetween={width > 768 ? 16 : 10}
+            slidesPerView={width > 990 ? 4 : 2}
             slidesPerGroup={1}
             autoplay={{
               delay: 3000,

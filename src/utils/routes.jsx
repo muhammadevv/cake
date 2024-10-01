@@ -1,3 +1,4 @@
+import { LogIn, SignUp } from "../components";
 import { AboutPage, HomePage, NotFoundPage, ProductPage, Collections } from "../pages";
 
 export const routes = [
@@ -16,7 +17,11 @@ export const routes = [
     element: <AboutPage />,
     path: '/about',
   },
-
+  {
+    id: 5,
+    element: <LogIn />,
+    path: '/login',
+  },
   {
     id: 6,
     element: <ProductPage />,
@@ -28,7 +33,12 @@ export const routes = [
     path: '/collections/:id',
   },
   {
-    id: 6,
+    id: 8,
+    element: <SignUp />,
+    path: '/signup',
+  },
+  {
+    id: 9,
     element: <NotFoundPage />,
     path: '*',
   },

@@ -6,12 +6,20 @@
 
   @include media(900) {
     margin-bottom: 60px;
+    margin-top: 50px;
+
   }
+
   @include media(768) {
     margin-bottom: 40px;
+    margin-top: 40px;
+
+
   }
+
   @include media(440) {
     margin-bottom: 20px;
+
   }
 
 
@@ -25,11 +33,11 @@
   &-image {
     width: 50%;
     height: 100%;
- 
+
   }
 
   &-content {
-    width:50%;
+    width: 50%;
     height: 100%;
   }
 
