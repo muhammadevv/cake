@@ -1,3 +1,5 @@
+export const signUp = '/auth/registration'
+
 export const bannerList = '/banner'
 export const categoryList = '/category'
 export const discountList = '/discount'
